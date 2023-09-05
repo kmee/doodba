@@ -1,5 +1,5 @@
 FROM python:3.9-slim-bullseye AS base
-
+ 
 EXPOSE 8069 8072
 
 ARG GEOIP_UPDATER_VERSION=4.3.0
