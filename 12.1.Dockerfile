@@ -96,7 +96,7 @@ RUN pip install \
         inotify \
     && sync
 COPY bin-deprecated/* bin/* /usr/local/bin/
-COPY lib/doodbalib /usr/local/lib/python3.5/site-packages/doodbalib
+COPY lib/doodbalib /usr/local/lib/python3.7/site-packages/doodbalib
 COPY build.d common/build.d
 COPY conf.d common/conf.d
 COPY entrypoint.d common/entrypoint.d
@@ -104,7 +104,7 @@ RUN mkdir -p auto/addons auto/geoip custom/src/private \
     && ln /usr/local/bin/direxec common/entrypoint \
     && ln /usr/local/bin/direxec common/build \
     && chmod -R a+rx common/entrypoint* common/build* /usr/local/bin \
-    && chmod -R a+rX /usr/local/lib/python3.5/site-packages/doodbalib \
+    && chmod -R a+rX /usr/local/lib/python3.7/site-packages/doodbalib \
     && cp -a /etc/GeoIP.conf /etc/GeoIP.conf.orig \
     && mv /etc/GeoIP.conf /opt/odoo/auto/geoip/GeoIP.conf \
     && ln -s /opt/odoo/auto/geoip/GeoIP.conf /etc/GeoIP.conf \
